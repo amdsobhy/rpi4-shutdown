@@ -1,0 +1,11 @@
+[Unit]
+Description=Shutdown Service for Rpi4
+
+[Service]
+Type=simple
+StandardOutput=journal
+StandardError=journal
+ExecStart=/opt/rpi4/bin/rpi4-shutdown.sh
+
+[Install]
+WantedBy=multi-user.target
