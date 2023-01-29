@@ -17,7 +17,7 @@ trap onError ERR
 
 which inotifywait > /dev/null
 if [[ "$?" == "1" ]]; then
-    sudo apt update && sudo apt install inotify-tools
+    sudo apt update && sudo apt install inotify-tools -y
 fi
 
 # Set gpio to input and rising edge triggered
