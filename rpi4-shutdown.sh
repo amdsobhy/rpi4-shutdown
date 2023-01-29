@@ -30,7 +30,7 @@ echo rising > /sys/class/gpio/gpio5/edge
 
 # Block wait for a gpio change in value
 inotifywait -t 0 -e modify /sys/class/gpio/gpio5/value
-if [[ "$?" == "0" ]];
+if [[ "$?" == "0" ]]; then
     echo "Power Button Pressed! Shutting Down..."
     shutdown 0
 else
